@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stone Paper Scissors</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Screen 1: Choose Hand -->
+<div id="screen1" class="screen active">
+  <h1>Choose Your Hand</h1>
+  <div class="hands">
+    <img src="userstone.png" alt="Rock" onclick="chooseHand('rock')">
+    <img src="userpaper.png" alt="Paper" onclick="chooseHand('paper')">
+    <img src="userscissors.png" alt="Scissors" onclick="chooseHand('scissors')">
+  </div>
+</div>
+
+<!-- Screen 2: Game Start -->
+<div id="screen2" class="screen">
+  <h1>Game Start!</h1>
+  <div class="game-display">
+    <div>
+      <h3>Your Hand</h3>
+      <img id="userHand" src="" alt="">
+    </div>
+    <div>
+      <h3>Computer Hand</h3>
+      <img id="computerHand" src="computerstone.png" alt="">
+    </div>
+  </div>
+</div>
+
+<!-- Screen 3: Result -->
+<div id="screen3" class="screen">
+  <h1 id="resultText"></h1>
+  <button class="btn" onclick="restartGame()">Play Again</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
